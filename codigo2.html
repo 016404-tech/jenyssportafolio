@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Jenyfer</title>
+    <style>
+        body {
+            background-color: #ffa600;
+        }
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Variables de color */
+        :root {
+            --magenta: #cc0070;
+            --white: #FFFFFF;
+            --gray: #808080;
+            --light-gray: #F5F5F5;
+        }
+
+        /* Tipografía */
+        body {
+            font-family: Impact, 'Arial Narrow Bold';
+            color: var(--white);
+            line-height: 5;
+        }
+
+        /* Navegación */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #d10263;
+            z-index: 1000;
+            box-shadow: 0 5px 5px rgba(231, 102, 145, 0.212);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--white);
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--magenta);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Secciones */
+        section {
+            padding: 4rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        /* Sobre mí */
+        .about .container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .about img {
+            width: 50%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about .text {
+            width: 50%;
+        }
+
+        .about h2 {
+            font-family: Impact;
+            font-size: 100px;
+            color: var(--magenta);
+            margin-bottom: 1rem;
+        }
+
+        .about p {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: oblique;
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .about ul {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: oblique;
+            list-style: none;
+            font-size: 20px;
+            padding-left: 0;
+            color: #ffffff;
+        }
+
+        .about li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Galerías (Portafolio y Ejemplos) */
+        .gallery {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgb(253, 253, 253);
+        }
+
+        .gallery .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* Colaboraciones */
+        .collaborations .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .collaborations h2 {
+            color: var(--magenta);
+            text-align: center;
+        }
+
+        .collaborations .placeholder {
+            text-align: center;
+            padding: 2rem;
+            color: var(--gray);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about .container {
+                flex-direction: column;
+            }
+
+            .about img, .about .text {
+                width: 100%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li><a href="#collaborations">Colaboraciones</a></li>
+            <li><a href="#examples">Ejemplos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <img src="mag.gif" alt="Hero GIF">
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="about" class="about">
+        <div class="container">
+            <img src="min.GIF" alt="Sobre mí GIF">
+            <div class="text">
+                <h2>Sobre mí</h2>
+                <p>Me llamo Jenyfer, Soy de la ciudad de Monterrey, Nuevo León, estudiante de diseño gráfico y me dedico:</p>
+                <ul>
+                    <li>A la elaboración de multimedia</li>
+                    <li>Mercancía personalizada</li>
+                    <li>Animación</li>
+                    <li>Branding de marca</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 style="color: var(--magenta); text-align: center; margin-bottom: 2rem;">Portafolio</h2>
+            <div class="gallery">
+                <div class="slides" id="portfolio-slides">
+                    <img src="p1.jpg" alt="Imagen 1">
+                    <img src="p2.png" alt="Imagen 2">
+                    <img src="p3.png" alt="Imagen 3">
+                    <img src="p4.png" alt="p4">
+                    <!-- Agrega más imágenes aquí -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colaboraciones -->
+    <section id="collaborations" class="collaborations">
+        <div class="container">
+            <h2 style="color: var(--magenta); text-align: center; margin-bottom: 2rem;">Colaboraciones</h2>
+            <div class="gallery">
+                <div class="slides" id="collaborations-slides">
+                    <img src="c1.jpeg" alt="c1">
+                    <img src="c2.jpeg" alt="Ejemplo 2">
+                    <img src="c3.jpeg" alt="Ejemplo 3">
+                    <img src="c4.jpg" alt="c4">
+                    <!-- Agrega más imágenes aquí -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejemplos -->
+    <section id="examples">
+        <div class="container">
+            <h2 style="color: var(--magenta); text-align: center; margin-bottom: 2rem;">Ejemplos</h2>
+            <div class="gallery">
+                <div class="slides" id="examples-slides">
+                    <img src="e1.jpeg" alt="Ejemplo 1">
+                    <img src="e2.jpg" alt="Ejemplo 2">
+                    <img src="e3.jpg" alt="Ejemplo 3">
+                    <!-- Agrega más imágenes aquí -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Función para crear slider automático
+        function createSlider(slidesId, interval = 3000) {
+            const slides = document.getElementById(slidesId);
+            const images = slides.children;
+            let currentIndex = 0;
+
+            function showNextSlide() {
+                currentIndex = (currentIndex + 1) % images.length;
+                slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            setInterval(showNextSlide, interval);
+        }
+
+        // Inicializar sliders
+        createSlider('portfolio-slides');
+        createSlider('collaborations-slides');
+        createSlider('examples-slides');
+    </script>
+</body>
+</html>
